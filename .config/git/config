@@ -1,0 +1,45 @@
+[user]
+name = Dmytro Osaulenko
+email = osauldmy@gmail.com
+
+[core]
+editor = nvim
+pager = less -+$LESS -RS
+whitespace = trailing-space,space-before-tab
+autocrlf = false
+
+[init]
+defaultBranch = master
+
+[pager]
+branch = false
+diff = true
+
+[push]
+default = simple
+
+[color]
+ui = true
+
+[credential]
+helper = cache --timeout=18000
+
+[alias]
+st = status
+ci = commit
+co = checkout
+br = branch
+ll = log --all --graph --decorate
+hide = update-index --assume-unchanged
+unhide = update-index --no-assume-unchanged
+
+[filter "lfs"]
+clean = git-lfs clean -- %f
+smudge = git-lfs smudge -- %f
+process = git-lfs filter-process
+required = true
+
+# Everything besides work dir will have personal email,
+# but inside work dir it will be work email.
+[includeIf "gitdir:~/work/"]
+path = ~/work/.gitconfig_include

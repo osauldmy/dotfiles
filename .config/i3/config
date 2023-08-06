@@ -1,0 +1,12 @@
+# windows/super as a modifier key
+set $mod Mod4
+font pango:JetBrains Mono 12
+
+include autostart
+include bar
+include bindings
+include borders
+include floating
+include manipulating
+include screensaver
+include workspaces

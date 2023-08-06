@@ -1,0 +1,9 @@
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+for_window [class="gnome-calendar"] floating enable
+for_window [class="org.gnome.Weather"] floating enable
+for_window [class="Font-manager"] floating enable
+for_window [class="Android Emulator"] floating enable
+
+# vim: ft=i3config

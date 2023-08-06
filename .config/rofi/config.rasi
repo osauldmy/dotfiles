@@ -1,0 +1,7 @@
+configuration {
+    modes: "run,drun,calc,emoji";
+    show-icons: true;
+    font: "JetBrains Mono 15";
+}
+
+@theme "/usr/share/rofi/themes/lb.rasi"

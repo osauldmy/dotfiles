@@ -1,0 +1,11 @@
+# inner: between windows, outer: "touching screen corners"
+gaps inner 0
+gaps outer 0
+
+# Smart borders will draw borders on windows only if there is more than one window in a workspace.
+# This feature can also be enabled only if the gap size between window and screen edge is 0.
+smart_borders on
+
+# border size
+default_border pixel 3
+default_floating_border pixel 2

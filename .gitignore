@@ -1,0 +1,20 @@
+.aws/credentials
+.azure/
+
+.cache/
+
+.config/aws/credentials
+.config/dotfiles/
+.config/secrets
+.config/zsh/.zcompdump*
+
+.gnupg
+
+.local/
+
+.netrc
+.password-store/
+.ssh/
+
+# in case I'm using these linux dotfiles on mac
+.DS_Store

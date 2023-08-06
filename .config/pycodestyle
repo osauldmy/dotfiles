@@ -1,0 +1,3 @@
+# Useful for neovim lsp.
+[pycodestyle]
+max-line-length = 120
