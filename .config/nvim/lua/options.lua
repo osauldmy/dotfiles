@@ -29,6 +29,11 @@ set.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 set.hlsearch = false
 set.incsearch = true
 
+-- tab and expanding
+set.tabstop = 2
+set.shiftwidth = 2
+set.expandtab = true
+
 -- misc
 set.completeopt = { "menu", "menuone", "noselect" }
 set.wrap = false
@@ -36,9 +41,3 @@ set.scrolloff = 15
 set.splitbelow = true
 set.splitright = true
 set.termguicolors = true
-
--- mostly python settings here
--- set.tabstop = 4
--- set.softtabstop = 4 -- ???
--- set.shiftwidth = 4
--- set.expandtab = true
