@@ -74,7 +74,6 @@ autoload -Uz compinit
 # Speeding up compinit. Only call compinit once a day (for all dumps) or use -C flag.
 for dump in ~/.config/zsh/.zcompdump(N.mh+24); do
     compinit
-    complete -C "/usr/bin/aws_completer" aws
 done
 compinit -C
 
