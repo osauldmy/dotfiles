@@ -41,3 +41,4 @@ set.scrolloff = 15
 set.splitbelow = true
 set.splitright = true
 set.termguicolors = true
+set.mouse = "a"
