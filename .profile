@@ -176,9 +176,6 @@ export TEXMFCONFIG=$XDG_CONFIG_HOME/texlive/texmf-config
 # Vagrant
 export VAGRANT_HOME="$XDG_DATA_HOME"/vagrant
 
-# wget
-alias wget='/usr/bin/wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
-
 # Wine
 export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
 
