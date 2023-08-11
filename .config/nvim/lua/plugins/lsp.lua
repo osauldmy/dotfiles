@@ -7,10 +7,10 @@ local language_servers = {
   "lua_ls",
   "ltex",
   "marksman",
-  "pylsp",
+  -- "pylsp",
   -- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/lua/mason-lspconfig/server_configurations/pylsp/README.md
   -- :PyLspInstall pyls-flake8 pylsp-mypy pyls-isort python-lsp-black python-lsp-ruff
-  -- "pyright",
+  "pyright",
   "ruff_lsp",
   "taplo", -- toml
   "vimls",
