@@ -13,9 +13,7 @@ dotfiles git status
 dotfiles git reset
 dotfiles git checkout # possibly fix conflicts if you already have some settings
 dotfiles pre-commit install # optional, but very very recommended
-# optional steps below
-dotfiles git config status.showUntrackedFiles no
-rm README.md && dotfiles git update-index --assume-unchanged README.md
+rm README.md && dotfiles git update-index --assume-unchanged README.md # optional
 ```
 
 ## Things I use
