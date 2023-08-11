@@ -55,6 +55,9 @@ local setup_cmp = function()
   -- Set configuration for specific filetype.
   cmp.setup.filetype("gitcommit", {
     sources = {
+      { name = "path" },
+      { name = "emoji" },
+      { name = "calc" },
       { name = "buffer" },
     },
   })
