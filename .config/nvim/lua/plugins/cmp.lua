@@ -26,7 +26,7 @@ local setup_cmp = function()
       { name = "path" },
       { name = "emoji" },
       { name = "calc" },
-      -- { name = "buffer" },
+      { name = "buffer" },
       { name = "latex_symbols", option = { strategy = 0 } },
     },
     snippet = {
