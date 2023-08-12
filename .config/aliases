@@ -14,7 +14,6 @@ fi
 alias grep="grep --color=auto"
 alias pygrep='grep --include "*.py"'
 
-alias gs="git status"
 alias ga="git add"
 alias gap="git add -p"
 alias gb="git branch"
@@ -29,6 +28,8 @@ alias gr="git reset"
 alias grm="git rm"
 alias grem="git remote"
 alias gsh="git show"
+alias gs="git status"
+alias gst="git stash"
 
 alias dotfiles='GIT_DIR="$HOME"/.config/dotfiles GIT_WORK_TREE="$HOME"'
 alias d="dotfiles"

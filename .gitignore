@@ -1,6 +1,6 @@
 .Xauthority
 .android/
-.aws/credentials
+.aws/
 .azure/
 .cache/
 
