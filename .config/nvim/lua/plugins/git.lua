@@ -1,4 +1,5 @@
 return {
+  { "tpope/vim-fugitive", event = "VeryLazy" },
   {
     "kdheepak/lazygit.nvim",
     dependencies = {
