@@ -15,17 +15,19 @@ local setup_cmp = function()
     },
     snippet = {
       expand = function(args)
+        require("luasnip.loaders.from_vscode").lazy_load()
         require("luasnip").lsp_expand(args.body)
       end,
     },
     mapping = cmp.mapping.preset.insert({
+      ["<CR>"] = cmp.mapping.confirm({ select = true }),
+      ["<C-e>"] = cmp.mapping.abort(),
+
       ["<C-n>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
       ["<C-p>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
-      ["<CR>"] = cmp.mapping.confirm({ select = true }),
-      ["<C-Space>"] = cmp.mapping.complete(),
+
       ["<C-b>"] = cmp.mapping.scroll_docs(-4),
       ["<C-f>"] = cmp.mapping.scroll_docs(4),
-      ["<C-e>"] = cmp.mapping.abort(),
     }),
     formatting = {
       format = function(entry, vim_item)
