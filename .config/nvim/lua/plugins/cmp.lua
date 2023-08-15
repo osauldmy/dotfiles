@@ -1,18 +1,3 @@
-local make_icons = function(entry, vim_item)
-  vim_item.kind = require("lspkind").symbolic(vim_item.kind, { mode = "symbol" })
-  vim_item.menu = ({
-    nvim_lua = "[Lua]",
-    nvim_lsp = "[LSP]",
-    nvim_lsp_signature_help = "[Signature]",
-    path = "[Path]",
-    buffer = "[Buffer]",
-    luasnip = "[Snippets]",
-    calc = "[Calc]",
-  })[entry.source.name] or entry.source.name
-  vim_item.abbr = string.sub(vim_item.abbr, 1, 60) -- NOTE: makes completion suggestions windows narrower
-  return vim_item
-end
-
 local setup_cmp = function()
   require("luasnip.loaders.from_vscode").lazy_load()
   local cmp = require("cmp")
@@ -43,7 +28,21 @@ local setup_cmp = function()
       ["<C-e>"] = cmp.mapping.abort(),
     }),
     formatting = {
-      format = make_icons,
+      format = function(entry, vim_item)
+        local lsp_client = entry.source.source.client
+
+        vim_item.kind = require("lspkind").symbolic(vim_item.kind, { mode = "symbol_text" })
+        vim_item.menu = ({
+          nvim_lsp = lsp_client ~= nil and lsp_client.name or "LSP",
+          nvim_lua = "Lua",
+          path = "Path",
+          buffer = "Buffer",
+          luasnip = "Snippets",
+          calc = "Calc",
+        })[entry.source.name] or entry.source.name
+        vim_item.abbr = string.sub(vim_item.abbr, 1, 60) -- NOTE: makes completion suggestions windows narrower
+        return vim_item
+      end,
     },
     window = {
       --  completion = cmp.config.window.bordered(),
