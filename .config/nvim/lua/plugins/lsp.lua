@@ -1,22 +1,3 @@
-local language_servers = {
-  "bashls",
-  "dockerls",
-  "docker_compose_language_service",
-  "html",
-  "jsonls",
-  "lua_ls",
-  "ltex",
-  "marksman",
-  -- "pylsp",
-  -- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/lua/mason-lspconfig/server_configurations/pylsp/README.md
-  -- :PyLspInstall pyls-flake8 pylsp-mypy pyls-isort python-lsp-black python-lsp-ruff
-  "pyright",
-  "ruff_lsp",
-  "taplo", -- toml
-  "vimls",
-  "yamlls",
-}
-
 local on_attach = function(_, bufnr)
   -- <C-x> <C-o>
   vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
@@ -70,9 +51,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 })
 
 local setup_lsps = function()
-  require("mason-lspconfig").setup({
-    ensure_installed = language_servers,
-  })
   local lspconfig = require("lspconfig")
 
   require("mason-lspconfig").setup_handlers({
