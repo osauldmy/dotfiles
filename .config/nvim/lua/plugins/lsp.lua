@@ -42,14 +42,6 @@ capabilities.textDocument.foldingRange = {
   lineFoldingOnly = true,
 }
 
--- https://www.reddit.com/r/neovim/comments/gtta9p/comment/hwni7j2/
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-  virtual_text = false, -- please no, distracts so much
-  signs = true, -- is more than enough, can look into the message with <space>e
-  update_in_insert = false,
-  underline = true,
-})
-
 local setup_lsps = function()
   local lspconfig = require("lspconfig")
 
