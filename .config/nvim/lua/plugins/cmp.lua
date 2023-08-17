@@ -1,12 +1,12 @@
-local setup_cmp = function()
+local function setup_cmp()
   require("luasnip.loaders.from_vscode").lazy_load()
   local cmp = require("cmp")
+
   cmp.setup({
     sources = {
       { name = "nvim_lua" },
       { name = "nvim_lsp" },
-      -- { name = "luasnip" },
-      { name = "luasnip", option = { show_autosnippets = true } },
+      { name = "luasnip" },
       { name = "path" },
       { name = "emoji" },
       { name = "calc" },
@@ -19,11 +19,12 @@ local setup_cmp = function()
       end,
     },
     mapping = cmp.mapping.preset.insert({
+      ["<Tab>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "s" }),
+      -- Tab+Ctrl+Shift
+      ["<C-S-i>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
+
       ["<CR>"] = cmp.mapping.confirm({ select = true }),
       ["<C-e>"] = cmp.mapping.abort(),
-
-      ["<C-n>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
-      ["<C-p>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
 
       ["<C-b>"] = cmp.mapping.scroll_docs(-4),
       ["<C-f>"] = cmp.mapping.scroll_docs(4),
@@ -63,20 +64,29 @@ local setup_cmp = function()
 end
 
 return {
-  "hrsh7th/nvim-cmp",
-  event = "InsertEnter",
-  dependencies = {
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-nvim-lua",
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-path",
-    "hrsh7th/cmp-emoji",
-    "hrsh7th/cmp-calc",
-    "kdheepak/cmp-latex-symbols",
-    "onsails/lspkind.nvim",
-    "L3MON4D3/LuaSnip",
-    "saadparwaiz1/cmp_luasnip",
-    "rafamadriz/friendly-snippets",
+  {
+    "hrsh7th/nvim-cmp",
+    event = "InsertEnter",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-nvim-lua",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-emoji",
+      "hrsh7th/cmp-calc",
+      "f3fora/cmp-spell",
+      -- "hrsh7th/cmp-nvim-lsp-signature-help",
+      "kdheepak/cmp-latex-symbols",
+      "onsails/lspkind.nvim",
+      "saadparwaiz1/cmp_luasnip",
+    },
+    config = setup_cmp,
   },
-  config = setup_cmp,
+  {
+    "L3MON4D3/LuaSnip",
+    dependencies = { "rafamadriz/friendly-snippets" },
+    event = "InsertEnter",
+    version = "2.*",
+    build = "make install_jsregexp",
+  },
 }
