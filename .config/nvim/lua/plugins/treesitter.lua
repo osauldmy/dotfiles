@@ -10,7 +10,9 @@ return {
         "vim",
         "lua",
         "regex",
-        "comment",
+        -- NOTE: `comment` is commented out for now:
+        --       significantly slows down nvim with long comments in the code
+        -- "comment",
         "bash",
         "markdown",
         "markdown_inline",
