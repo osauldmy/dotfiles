@@ -1,4 +1,4 @@
-local on_attach = function(_, bufnr)
+local function on_attach(_, bufnr)
   -- <C-x> <C-o>
   vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
@@ -20,11 +20,12 @@ local on_attach = function(_, bufnr)
   vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
   vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
   vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, opts)
-  --
+
   vim.keymap.set("n", "<space>f", function()
-    vim.lsp.buf.format({ async = true, timeout = nil })
+    vim.cmd([[Format]])
   end, opts)
-  vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, opts) -- help etc
+  -- vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end, opts)
+  vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, opts)
 end
 
 -- local capabilities = require("cmp_nvim_lsp").default_capabilities()
