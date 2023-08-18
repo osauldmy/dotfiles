@@ -61,6 +61,8 @@ local function setup_cmp()
       { name = "buffer" },
     },
   })
+
+  cmp.event:on("confirm_done", require("nvim-autopairs.completion.cmp").on_confirm_done())
 end
 
 return {
@@ -81,6 +83,11 @@ return {
       "saadparwaiz1/cmp_luasnip",
     },
     config = setup_cmp,
+  },
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    opts = {},
   },
   {
     "L3MON4D3/LuaSnip",
