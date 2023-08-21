@@ -12,7 +12,6 @@ local function on_attach(_, bufnr)
   vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
 
   vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
-  -- vim.keymap.set("n", "<space>rn", ":IncRename")
 
   -- vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
   vim.keymap.set("n", "gr", require("telescope.builtin").lsp_references, opts)
@@ -25,6 +24,7 @@ local function on_attach(_, bufnr)
     vim.cmd([[Format]])
   end, opts)
   -- vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end, opts)
+
   vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, opts)
 end
 
@@ -45,45 +45,10 @@ local setup_lsps = function()
         on_attach = on_attach,
       })
     end,
-    --
-    ["pylsp"] = function()
-      lspconfig.pylsp.setup({
-        capabilities = capabilities,
-        on_attach = on_attach,
-        settings = {
-          pylsp = {
-            plugins = {
-              rope_autoimport = { enabled = true },
-              pycodestyle = {
-                maxLineLength = 120,
-              },
-            },
-          },
-        },
-      })
-    end,
-    --
-    ["lua_ls"] = function()
-      lspconfig.lua_ls.setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
-        settings = {
-          Lua = {
-            telemetry = { enable = false },
-            runtime = { version = "LuaJIT" },
-            diagnostics = {
-              globals = { "vim" },
-            },
-          },
-        },
-      })
-    end,
-    --
   })
 end
 
 return {
-  -- { "folke/neodev.nvim", opts = {}, event = "VeryLazy" },
   {
     "williamboman/mason.nvim",
     event = "VeryLazy",
