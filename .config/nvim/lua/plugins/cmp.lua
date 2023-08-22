@@ -3,10 +3,12 @@ local function setup_cmp()
   local cmp = require("cmp")
 
   cmp.setup({
+    preselect = cmp.PreselectMode.None,
     sources = {
       { name = "nvim_lua" },
       { name = "cmp_tabnine" },
       { name = "nvim_lsp" },
+      { name = "nvim_lsp_signature_help" },
       { name = "luasnip" },
       { name = "path" },
       { name = "emoji" },
@@ -79,8 +81,7 @@ return {
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-emoji",
       "hrsh7th/cmp-calc",
-      "f3fora/cmp-spell",
-      -- "hrsh7th/cmp-nvim-lsp-signature-help",
+      "hrsh7th/cmp-nvim-lsp-signature-help",
       "kdheepak/cmp-latex-symbols",
       "onsails/lspkind.nvim",
       "saadparwaiz1/cmp_luasnip",
