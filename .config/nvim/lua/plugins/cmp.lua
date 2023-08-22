@@ -5,6 +5,7 @@ local function setup_cmp()
   cmp.setup({
     sources = {
       { name = "nvim_lua" },
+      { name = "cmp_tabnine" },
       { name = "nvim_lsp" },
       { name = "luasnip" },
       { name = "path" },
@@ -37,6 +38,7 @@ local function setup_cmp()
         vim_item.menu = ({
           nvim_lsp = lsp_client ~= nil and lsp_client.name or "LSP",
           nvim_lua = "Lua",
+          cmp_tabnine = "TabNine",
           path = "Path",
           buffer = "Buffer",
           luasnip = "Snippets",
@@ -59,6 +61,7 @@ local function setup_cmp()
       { name = "emoji" },
       { name = "calc" },
       { name = "buffer" },
+      { name = "cmp_tabnine" },
     },
   })
 
@@ -83,6 +86,22 @@ return {
       "saadparwaiz1/cmp_luasnip",
     },
     config = setup_cmp,
+  },
+  {
+    "tzachar/cmp-tabnine",
+    build = "./install.sh",
+    event = "InsertEnter",
+    config = function()
+      require("cmp_tabnine.config"):setup({
+        max_lines = 1000,
+        max_num_results = 10,
+        sort = true,
+        run_on_every_keystroke = true,
+        snippet_placeholder = "..",
+        ignored_file_types = {},
+        show_prediction_strength = true,
+      })
+    end,
   },
   {
     "windwp/nvim-autopairs",
