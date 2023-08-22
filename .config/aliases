@@ -22,6 +22,7 @@ alias gcm="git commit -m"
 alias gco="git checkout"
 alias gd="git diff"
 alias gds="git diff --staged"
+alias gf='git commit --fixup $(git log --oneline | fzf --layout=reverse | cut -d" " -f1)'
 alias gl="git log"
 alias gp="git push"
 alias gpl="git pull"
