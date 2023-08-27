@@ -3,6 +3,6 @@ return {
   event = "VeryLazy",
   config = true,
   keys = {
-    { "<C-P>", "<cmd>ToggleTerm direction=float<CR>" },
+    { "<C-p>", "<cmd>ToggleTerm direction=float<CR>" },
   },
 }
