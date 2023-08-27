@@ -5,8 +5,7 @@ set.relativenumber = true
 set.number = true
 set.cursorline = true
 set.cursorlineopt = "number"
--- set.signcolumn = "yes"
-set.signcolumn = "number"
+set.signcolumn = "yes"
 
 -- indentation
 set.autoindent = true
