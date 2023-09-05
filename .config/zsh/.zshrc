@@ -63,6 +63,7 @@ export DEFAULT_USER=$USER
 [ "$(uname)" = "Linux" ] && fpath=(/usr/share/zsh/site-functions ~/.config/zsh/site-functions $fpath)
 
 zstyle :compinstall filename "$XDG_CONFIG_HOME/zsh/.zshrc"
+zstyle ':completion:*:*:make:*' tag-order 'targets'
 zstyle ':completion:*' list-dirs-first false
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
