@@ -75,6 +75,12 @@ swap() {
   mv $TMPFILE "$2"
 }
 
+load_env() {
+  set -o allexport
+  source .env
+  set +o allexport
+}
+
 # Rename all files with extension $1 to extension $2
 # example with typo: *.tx -> *.txt
 mv_all() {
