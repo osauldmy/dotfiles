@@ -27,6 +27,7 @@ alias gds="git diff --staged"
 alias gf='COMMIT=$(git log --oneline | fzf --layout=reverse | cut -d" " -f1); git commit --fixup=$COMMIT && git rebase -i --autosquash $COMMIT~1'
 alias gl="git log"
 alias gp="git push"
+alias gpoh="git push origin HEAD"
 alias gpl="git pull"
 alias gr="git reset"
 alias grm="git rm"
