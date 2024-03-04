@@ -31,7 +31,7 @@ alias gpoh="git push origin HEAD"
 alias gpl="git pull"
 alias gmv="git mv"
 alias gr="git reset"
-alias grb="git rebase --committer-date-is-author-date"
+alias grb="git rebase" #  --committer-date-is-author-date
 alias grbi='COMMIT=$(git log --oneline | fzf --layout=reverse | cut -d" " -f1); git rebase -i --committer-date-is-author-date "${COMMIT}^"'
 alias grm="git rm"
 alias grem="git remote"
