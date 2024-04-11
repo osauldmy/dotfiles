@@ -1,7 +1,6 @@
 alias ls="ls -h --color=auto"
 alias ll="ls -l"
 alias la="ls -la"
-alias l="ls -l"
 
 alias mv="mv -i"
 
@@ -44,6 +43,7 @@ alias d="dotfiles"
 
 alias i=ipython
 alias k=kubectl
+alias l=lazygit
 alias p=python3
 alias pip=pip3
 alias python=python3
