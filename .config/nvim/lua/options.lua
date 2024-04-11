@@ -33,6 +33,9 @@ set.tabstop = 2
 set.shiftwidth = 2
 set.expandtab = true
 
+-- spelling
+set.spell = true
+
 -- misc
 set.completeopt = { "menu", "menuone", "noselect" }
 set.wrap = false
