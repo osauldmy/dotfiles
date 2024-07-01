@@ -25,7 +25,14 @@ alias gd="git diff"
 alias gds="git diff --staged"
 # https://gist.github.com/simonwagner/9552064
 alias gf='COMMIT=$(git log --oneline | fzf --layout=reverse | cut -d" " -f1); git commit --fixup=$COMMIT && git rebase -i --autosquash $COMMIT~1'
+# Simple "git log" alias, nothing fancy
 alias gl="git log"
+# "git log oneline"
+alias glo="git log --all --graph --abbrev-commit --pretty=oneline --decorate=short"
+# "git log pretty" https://stackoverflow.com/a/53854056/6867502
+alias glp="git log --all --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)[%an]%Creset %Cgreen%cr %Creset'"
+# "git log summary or simplified", what branch is coming from what branch etc
+alias gls="git log --all --graph --abbrev-commit --pretty=oneline --simplify-by-decoration"
 alias gp="git push"
 alias gpoh="git push origin HEAD"
 alias gpl="git pull"
