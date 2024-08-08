@@ -70,6 +70,7 @@ alias python=python3
 alias t=tree
 alias vi=vim
 alias vim=nvim
+alias v=vim
 alias vimdiff="nvim -d"
 
 # shellcheck source=/dev/null
