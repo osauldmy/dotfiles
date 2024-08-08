@@ -9,7 +9,7 @@ whitespace = trailing-space,space-before-tab
 autocrlf = false
 
 [init]
-defaultBranch = master
+defaultBranch = main
 
 [pager]
 branch = false
