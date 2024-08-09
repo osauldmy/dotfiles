@@ -40,18 +40,6 @@ repos:
       - id: prettier
         exclude: ".config/nvim/lazy-lock.json"
 
-  # NOTE: for now there aren't a lot of python files in this repo
-  # - repo: https://github.com/charliermarsh/ruff-pre-commit
-  #   rev: "v0.0.275"
-  #   hooks:
-  #     - id: ruff
-  #       args: [--ignore, E501]
-  #
-  # - repo: https://github.com/psf/black
-  #   rev: "23.3.0"
-  #   hooks:
-  #     - id: black
-
   - repo: https://github.com/codespell-project/codespell
     rev: v2.2.5
     hooks:
