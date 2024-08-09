@@ -132,7 +132,6 @@ export PYENV_ROOT="$XDG_DATA_HOME"/pyenv
 export PATH="$PYENV_ROOT"/bin:"$PATH"
 
 # Python
-export PYTHONSTARTUP="$XDG_CONFIG_HOME"/python_startup.py
 
 # pre-commit colors fix
 export PRE_COMMIT_COLOR=always
