@@ -22,10 +22,6 @@ return {
         },
         stdin = true,
       },
-      python = {
-        ft.python.black,
-        ft.python.isort,
-      },
       sh = { ft.sh.shfmt },
       dart = { ft.dart.dartformat },
       javascript = { ft.typescript.prettier },
