@@ -11,5 +11,4 @@ keymap("n", "<M-Up>", "<C-w>k", opts)
 keymap("n", "<M-Down>", "<C-w>j", opts)
 keymap("n", "<M-Right>", "<C-w>l", opts)
 
-
 vim.api.nvim_create_user_command("Gap", "Git add -p %", {})
