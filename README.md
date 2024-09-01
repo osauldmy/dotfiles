@@ -19,7 +19,7 @@ rm README.md && dotfiles git update-index --assume-unchanged README.md # optiona
 ## Things I use
 
 ```
-OS: Arch Linux(i3wm, rofi), [MacOS (yabai, skhd)]
+OS: Arch Linux(i3wm, rofi), MacOS
 Shell: zsh
 Terminal: alacritty
 Terminal font: Iosevka
