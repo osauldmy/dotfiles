@@ -11,7 +11,7 @@ git clone --bare https://github.com/osauldmy/dotfiles ~/.config/dotfiles
 alias dotfiles='GIT_DIR="$HOME"/.config/dotfiles GIT_WORK_TREE="$HOME"'
 dotfiles git status
 dotfiles git reset
-dotfiles git checkout # possibly fix conflicts if you already have some settings
+dotfiles git checkout . # possibly fix conflicts if you already have some settings
 dotfiles pre-commit install # optional, but very very recommended
 rm README.md && dotfiles git update-index --assume-unchanged README.md # optional
 ```
