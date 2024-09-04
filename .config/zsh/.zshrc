@@ -59,7 +59,7 @@ export DEFAULT_USER=$USER
 #                           Configure completion(s)                            #
 ################################################################################
 
-# [ "$(uname -m)" = "arm64" ] && fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
+[ "$(uname)" = "Darwin" ] && fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 [ "$(uname)" = "Linux" ] && fpath=(/usr/share/zsh/site-functions ~/.config/zsh/site-functions $fpath)
 
 zstyle :compinstall filename "$XDG_CONFIG_HOME/zsh/.zshrc"
