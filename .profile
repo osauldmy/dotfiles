@@ -74,6 +74,9 @@ export CHROME_EXECUTABLE=/usr/bin/chromium
 # Google Test / GTest
 export GTEST_COLOR=1
 
+# Homebrew (only for mac)
+[ "$(uname)" = "Darwin" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # ICE (X11 Inter-Client Exchange library)
 export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority
 
