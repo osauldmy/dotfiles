@@ -64,3 +64,4 @@ multiplier = 5
 
 [window]
 opacity = 0.95
+decorations_theme_variant = "dark"
