@@ -7,5 +7,6 @@ return {
     local telescope_builtin = require("telescope.builtin")
     vim.keymap.set("n", "<space>ff", telescope_builtin.find_files)
     vim.keymap.set("n", "<space>fg", telescope_builtin.live_grep)
+    vim.keymap.set("n", "<space>fr", telescope_builtin.resume)
   end,
 }
