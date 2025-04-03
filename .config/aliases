@@ -37,8 +37,10 @@ alias gls="git log --all --graph --abbrev-commit --pretty=oneline --simplify-by-
 alias gp="git push"
 alias gpoh="git push origin HEAD"
 alias gpl="git pull"
+alias gm="git merge"
 alias gmv="git mv"
 alias gr="git reset"
+alias grv="git revert"
 # alias grb="git rebase"
 # Fixes situation when after a week of developing a PR with normal commit timestamps
 # I rebase on newer master and lose all timestamps and PR looks like I've added N commits during one minute.
