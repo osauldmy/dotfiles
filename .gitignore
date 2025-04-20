@@ -64,7 +64,6 @@
 .mix/
 .mozilla/
 .netrc
-.npm/
 .ollama/
 .password-store/
 .pki/
