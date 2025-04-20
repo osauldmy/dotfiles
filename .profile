@@ -24,45 +24,11 @@ export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 # More: https://wiki.archlinux.org/index.php/XDG_Base_Directory       #
 #######################################################################
 
-# Android
-# export ANDROID_SDK_HOME="$XDG_CONFIG_HOME"/android
-# export ANDROID_HOME=$XDG_CONFIG_HOME/android/Sdkexport
-# export ANDROID_AVD_HOME="$XDG_DATA_HOME"/android/
-# export ANDROID_EMULATOR_HOME="$XDG_DATA_HOME"/android/emulator
-# export ANDROID_PREFS_ROOT="$XDG_CONFIG_HOME"/android
-# export ADB_KEYS_PATH="$ANDROID_PREFS_ROOT"
-# export ADB_VENDOR_KEY="$XDG_CONFIG_HOME"/android
-# PATH=$PATH:$ANDROID_HOME/emulatorexport
-# PATH=$PATH:$ANDROID_HOME/toolsexport
-# PATH=$PATH:$ANDROID_HOME/tools/binexport
-# PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# export PATH=/opt/android-sdk/tools:$PATH
-# export PATH=/opt/android-sdk/tools/bin:$PATH
-export PATH=/opt/android-sdk/cmdline-tools/latest/bin/:$PATH
-
-# Arduino (imo a little better version than setting alias for exe with config path)
-export ARDUINO_DIRECTORIES_USER="$XDG_DATA_HOME/arduino/user"
-export ARDUINO_DIRECTORIES_DATA="$XDG_DATA_HOME/arduino/data"
-export ARDUINO_DIRECTORIES_DOWNLOADS="$XDG_DATA_HOME/arduino/downloads"
-
-# AWS
-# export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME"/aws/credentials
-# export AWS_CONFIG_FILE="$XDG_CONFIG_HOME"/aws/config
-
-# Conan (C++ build system)
-export CONAN_USER_HOME="$XDG_CONFIG_HOME"
-
-# CUDA / Nvidia
-export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 
 # Docker
 export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
 export COMPOSE_DOCKER_CLI_BUILD=1
 export DOCKER_BUILDKIT=1
-
-# elinks
-export ELINKS_CONFDIR="$XDG_CONFIG_HOME"/elinks
 
 # Elixir
 export ERL_AFLAGS="-kernel shell_history enabled"
@@ -79,14 +45,6 @@ export GTEST_COLOR=1
 
 # ICE (X11 Inter-Client Exchange library)
 export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority
-
-# python-gitlab / GitLab CLI
-export PYTHON_GITLAB_CFG="$XDG_CONFIG_HOME/python_gitlab/config"
-
-# GNUpg
-# export GNUPGHOME="$XDG_DATA_HOME"/gnupg
-# alias gpg='gpg2 --homedir "$XDG_DATA_HOME"/gnupg'
-# alias gpg2='gpg2 --homedir "$XDG_DATA_HOME"/gnupg'
 
 # Go
 export GOPATH="$XDG_DATA_HOME"/go
@@ -109,16 +67,12 @@ export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
 
 # Java/OpenJDK
-# export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
 # less: disable less history
 export LESSHISTFILE=-
 
 # Use nvim as man pager if available
 command -v nvim >/dev/null && export MANPAGER='nvim +Man!'
-
-# Mathematica
-export MATHEMATICA_USERBASE="$XDG_CONFIG_HOME"/mathematica
 
 # node / npm
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
@@ -133,9 +87,6 @@ export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 [ "$(uname)" = "Linux" ] && export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 [ "$(uname)" = "Darwin" ] && export PASSWORD_STORE_EXTENSIONS_DIR="$HOMEBREW_PREFIX"/lib/password-store/extensions
 
-# Python related
-export PYENV_ROOT="$XDG_DATA_HOME"/pyenv
-export PATH="$PYENV_ROOT"/bin:"$PATH"
 
 # Python
 
@@ -146,22 +97,10 @@ export PRE_COMMIT_COLOR=always
 export REDISCLI_HISTFILE="$XDG_DATA_HOME"/redis/rediscli_history
 export REDISCLI_RCFILE="$XDG_CONFIG_HOME"/redis/redisclirc
 
-# Ruby
-export IRBRC="$XDG_CONFIG_HOME"/irb/irbrc
-export GEM_HOME="$XDG_DATA_HOME"/gem
-export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
-export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME"/bundle
-export BUNDLE_USER_CACHE="$XDG_CACHE_HOME"/bundle
-export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME"/bundle
-# export PATH="${GEM_HOME}"/ruby/*/bin:"$PATH"
-
 # Rust
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export PATH="$XDG_DATA_HOME/cargo/bin:$PATH"
-
-# SageMath
-export DOT_SAGE="$XDG_CONFIG_HOME"/sage
 
 # Sqlite3
 export SQLITE_HISTORY=$XDG_DATA_HOME/sqlite_history
