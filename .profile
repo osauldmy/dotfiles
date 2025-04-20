@@ -106,7 +106,7 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export PATH="$XDG_DATA_HOME/cargo/bin:$PATH"
 
 # Sqlite3
-export SQLITE_HISTORY=$XDG_DATA_HOME/sqlite_history
+export SQLITE_HISTORY=$XDG_CACHE_HOME/sqlite_history
 alias sqlite='sqlite3 -init "$XDG_CONFIG_HOME"/sqlite3/sqliterc'
 alias sqlite3="sqlite"
 
