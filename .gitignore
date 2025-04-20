@@ -2,6 +2,7 @@
 .aws/
 .azure/
 .cache/
+.cdk/
 .config/Google/
 .config/QtProject.conf
 .config/Thunar/
@@ -57,7 +58,9 @@
 .icons/
 .java/
 .keras/
+.kotlinc_history
 .local/
+.m2/
 .mix/
 .mozilla/
 .netrc
@@ -67,8 +70,12 @@
 .pub-cache/
 .ssh/
 .ssr/
+.steam/
+.steampath
+.steampid
 .streamlit/
 .terraform.d/
+.vscode-oss/
 .vscode/
 .wget-hsts
 .xsession-errors
@@ -77,6 +84,7 @@
 .zoom/
 .Xauthority
 
+Books/
 Desktop/
 Development/
 Documents/
