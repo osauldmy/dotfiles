@@ -1,25 +1,18 @@
+-- Other alternatives to nvim-cmp to try
+-- https://github.com/Saghen/blink.cmp
+-- https://github.com/ms-jpq/coq_nvim
+
 local function setup_cmp()
-  require("luasnip.loaders.from_vscode").lazy_load()
   local cmp = require("cmp")
 
   cmp.setup({
     preselect = cmp.PreselectMode.None,
     sources = {
-      { name = "nvim_lua" },
-      { name = "cmp_tabnine" },
       { name = "nvim_lsp" },
+      { name = "nvim_lua" },
       { name = "nvim_lsp_signature_help" },
-      { name = "luasnip" },
       { name = "path" },
-      { name = "emoji" },
-      { name = "calc" },
       { name = "buffer" },
-      { name = "latex_symbols", option = { strategy = 0 } },
-    },
-    snippet = {
-      expand = function(args)
-        require("luasnip").lsp_expand(args.body)
-      end,
     },
     mapping = cmp.mapping.preset.insert({
       ["<Tab>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "s" }),
@@ -44,10 +37,7 @@ local function setup_cmp()
   cmp.setup.filetype("gitcommit", {
     sources = {
       { name = "path" },
-      { name = "emoji" },
-      { name = "calc" },
       { name = "buffer" },
-      { name = "cmp_tabnine" },
     },
   })
 
@@ -63,41 +53,14 @@ return {
       "hrsh7th/cmp-nvim-lua",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
-      "hrsh7th/cmp-emoji",
-      "hrsh7th/cmp-calc",
       "hrsh7th/cmp-nvim-lsp-signature-help",
-      "kdheepak/cmp-latex-symbols",
       "onsails/lspkind.nvim",
-      "saadparwaiz1/cmp_luasnip",
     },
     config = setup_cmp,
-  },
-  {
-    "tzachar/cmp-tabnine",
-    build = "./install.sh",
-    event = "InsertEnter",
-    config = function()
-      require("cmp_tabnine.config"):setup({
-        max_lines = 1000,
-        max_num_results = 10,
-        sort = true,
-        run_on_every_keystroke = true,
-        snippet_placeholder = "..",
-        ignored_file_types = {},
-        show_prediction_strength = true,
-      })
-    end,
   },
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
     opts = {},
-  },
-  {
-    "L3MON4D3/LuaSnip",
-    dependencies = { "rafamadriz/friendly-snippets" },
-    event = "InsertEnter",
-    version = "2.*",
-    build = "make install_jsregexp",
   },
 }

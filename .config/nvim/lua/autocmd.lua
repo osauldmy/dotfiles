@@ -19,7 +19,3 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, {
 -- Remember folds on write/exit and restore them on opening
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, { pattern = "*.*", command = "silent! loadview" })
 vim.api.nvim_create_autocmd({ "BufWinLeave" }, { pattern = "*.*", command = "mkview" })
-
--- Save made highlights on exit and load on enter
-vim.api.nvim_create_autocmd({ "BufWinEnter" }, { pattern = "*.*", command = "silent Hi load" })
-vim.api.nvim_create_autocmd({ "BufWinLeave" }, { pattern = "*.*", command = "silent Hi save" })

@@ -13,6 +13,4 @@ return {
       make_transparent_background()
     end,
   },
-  { "Shatur/neovim-ayu", event = "VeryLazy" },
-  { "folke/tokyonight.nvim", event = "VeryLazy" },
 }

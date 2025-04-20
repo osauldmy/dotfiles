@@ -1,7 +1,3 @@
--- NOTE: plus don't forgot to add this to alacritty.yml
--- key_bindings:
---    - { key: Tab, mods: Control|Shift, chars: "\x1b[73;5u" }
-
 return {
   "akinsho/bufferline.nvim",
   event = "VeryLazy",
