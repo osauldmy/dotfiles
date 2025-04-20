@@ -1,9 +1,7 @@
-.Xauthority
 .android/
 .aws/
 .azure/
 .cache/
-
 .config/Google/
 .config/QtProject.conf
 .config/Thunar/
@@ -46,7 +44,6 @@
 .config/zoomus.conf
 .config/zsh/.zcompcache/*
 .config/zsh/.zcompdump*
-
 .dart-tool/
 .dart/
 .dartServer/
@@ -78,8 +75,10 @@
 .xsession-errors.old
 .yarnrc
 .zoom/
+.Xauthority
 
 Desktop/
+Development/
 Documents/
 Downloads/
 Library/
@@ -87,8 +86,6 @@ Movies/
 Music/
 Pictures/
 Public/
-
-Development/
 dev/
 work/
 
