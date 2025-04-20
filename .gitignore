@@ -11,6 +11,7 @@
 .config/aws/credentials
 .config/cef_user_data/
 .config/chromium/
+.config/colima/
 .config/cpupower_gui/
 .config/dconf/
 .config/docker/
@@ -34,6 +35,7 @@
 .config/secrets
 .config/settings
 .config/spotify/
+.config/tmux/plugins/
 .config/tool_state
 .config/variety/
 .config/vlc/
@@ -42,22 +44,28 @@
 .config/xfce4/
 .config/zoom.conf
 .config/zoomus.conf
+.config/zsh/.zcompcache/*
 .config/zsh/.zcompdump*
 
 .dart-tool/
 .dart/
 .dartServer/
 .dmrc
+.docker
+.emulator_console_auth_token
 .flutter
 .flutter-devtools/
 .gnupg/
+.hex/
 .icons/
 .java/
 .keras/
 .local/
+.mix/
 .mozilla/
 .netrc
 .npm/
+.ollama/
 .password-store/
 .pki/
 .pub-cache/
@@ -65,12 +73,26 @@
 .ssr/
 .streamlit/
 .terraform.d/
+.vscode/
 .wget-hsts
 .xsession-errors
 .xsession-errors.old
+.yarnrc
 .zoom/
 
+Desktop/
+Documents/
 Downloads/
-dev/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
 
-.DS_Store  # in case I'm using these linux dotfiles on mac
+Development/
+dev/
+work/
+
+# in case I'm using these linux dotfiles on mac
+.CFUserTextEncoding
+.DS_Store
