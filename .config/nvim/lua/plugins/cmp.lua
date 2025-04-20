@@ -33,20 +33,8 @@ local function setup_cmp()
       ["<C-f>"] = cmp.mapping.scroll_docs(4),
     }),
     formatting = {
-      format = function(entry, vim_item)
-        local lsp_client = entry.source.source.client
-
+      format = function(_, vim_item)
         vim_item.kind = require("lspkind").symbolic(vim_item.kind, { mode = "symbol_text" })
-        vim_item.menu = ({
-          nvim_lsp = lsp_client ~= nil and lsp_client.name or "LSP",
-          nvim_lua = "Lua",
-          cmp_tabnine = "TabNine",
-          path = "Path",
-          buffer = "Buffer",
-          luasnip = "Snippets",
-          calc = "Calc",
-        })[entry.source.name] or entry.source.name
-        vim_item.abbr = string.sub(vim_item.abbr, 1, 60) -- NOTE: makes completion suggestions windows narrower
         return vim_item
       end,
     },
