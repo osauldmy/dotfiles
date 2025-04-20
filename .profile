@@ -24,7 +24,6 @@ export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 # More: https://wiki.archlinux.org/index.php/XDG_Base_Directory       #
 #######################################################################
 
-
 # Docker
 export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
 export COMPOSE_DOCKER_CLI_BUILD=1
@@ -41,7 +40,12 @@ export CHROME_EXECUTABLE=/usr/bin/chromium
 export GTEST_COLOR=1
 
 # Homebrew (only for mac)
-[ "$(uname)" = "Darwin" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+if [ "$(uname)" = "Darwin" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  export PATH="$HOMEBREW_PREFIX/opt/libpq/bin:$PATH"
+  export PATH="$HOMEBREW_PREFIX/opt/openjdk/bin:$PATH"
+  export PATH="$HOMEBREW_PREFIX/opt/trash-cli/bin/:$PATH"
+fi
 
 # ICE (X11 Inter-Client Exchange library)
 export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority
@@ -65,8 +69,6 @@ export PATH=~/.cabal/bin/:"$PATH"
 # ipython / jupyter
 export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
-
-# Java/OpenJDK
 
 # less: disable less history
 export LESSHISTFILE=-
