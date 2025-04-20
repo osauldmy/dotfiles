@@ -1,3 +1,5 @@
+exec --no-startup-id dex --autostart --environment i3
+
 # compositor (transparency, etc)
 exec --no-startup-id picom --daemon
 
@@ -15,5 +17,10 @@ exec --no-startup-id dunst
 
 # Hiding mouse when unused
 exec --no-startup-id unclutter
+
+exec --no-startup-id setxkbmap -option grp:switch,grp:alt_shift_toggle us,cz,ua
+
+exec --no-startup-id xrandr -s 2560x1440 -r 240
+
 
 # vim: ft=i3config

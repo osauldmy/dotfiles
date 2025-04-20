@@ -1,5 +1,7 @@
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --color=505050 --date-color=ffffff --layout-color=ffffff --time-color=ffffff --keylayout=1
+
+# NOTE: uncomment if have laptop with Arch and need screensaver. Not needed at desktop
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy --nofork --nofork --ignore-empty-password --color=505050 --date-color=ffffff --layout-color=ffffff --time-color=ffffff --keylayout=1
 
 # vim: ft=i3config
