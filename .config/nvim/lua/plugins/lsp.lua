@@ -19,12 +19,7 @@ local function on_attach(_, bufnr)
   vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
   vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
   vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, opts)
-
-  vim.keymap.set("n", "<space>f", function()
-    vim.cmd([[Format]])
-  end, opts)
-  -- vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end, opts)
-
+  vim.keymap.set("n", "<space>f", vim.lsp.buf.format, opts)
   vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, opts)
 end
 
