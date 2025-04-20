@@ -114,6 +114,9 @@ export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
 # less: disable less history
 export LESSHISTFILE=-
 
+# Use nvim as man pager if available
+command -v nvim >/dev/null && export MANPAGER='nvim +Man!'
+
 # Mathematica
 export MATHEMATICA_USERBASE="$XDG_CONFIG_HOME"/mathematica
 
