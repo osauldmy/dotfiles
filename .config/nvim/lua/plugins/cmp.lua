@@ -38,10 +38,6 @@ local function setup_cmp()
         return vim_item
       end,
     },
-    window = {
-      --  completion = cmp.config.window.bordered(),
-      documentation = cmp.config.window.bordered(),
-    },
   })
 
   -- Set configuration for specific filetype.
