@@ -87,8 +87,11 @@ export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 [ "$(uname)" = "Linux" ] && export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 [ "$(uname)" = "Darwin" ] && export PASSWORD_STORE_EXTENSIONS_DIR="$HOMEBREW_PREFIX"/lib/password-store/extensions
 
+# Postgresql / psql
+export PSQL_HISTORY="$XDG_CACHE_HOME/psql_history"
 
 # Python
+export PYTHON_HISTORY="$XDG_CACHE_HOME/python_history"
 
 # pre-commit colors fix
 export PRE_COMMIT_COLOR=always
