@@ -34,7 +34,6 @@
 .config/secrets
 .config/settings
 .config/spotify/
-.config/tmux/plugins/
 .config/tool_state
 .config/variety/
 .config/vlc/
