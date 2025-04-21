@@ -62,9 +62,7 @@ export GTK_RC_FILES="$XDG_CONFIG_HOME"/gtk-1.0/gtkrc
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 
 # Haskell
-export PATH=~"/.ghcup/ghc/*/bin":"$PATH"
-export PATH=~/.ghcup/bin/:"$PATH"
-export PATH=~/.cabal/bin/:"$PATH"
+export GHCUP_USE_XDG_DIRS=true
 
 # ipython / jupyter
 export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
