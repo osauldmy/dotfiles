@@ -68,6 +68,10 @@ export GHCUP_USE_XDG_DIRS=true
 export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
 
+# k8s
+export KUBECONFIG="$XDG_CONFIG_HOME/kube"
+export KUBECACHEDIR="$XDG_CACHE_HOME/kube"
+
 # less: disable less history
 export LESSHISTFILE=-
 
