@@ -1,18 +1,23 @@
+.CFUserTextEncoding
+.DS_Store
+.Xauthority
 .android/
 .aws/
 .azure/
 .cache/
 .cdk/
 .config/Android Open Source Project/
+.config/Code - OSS/
 .config/Google/
+.config/JetBrains/
 .config/QtProject.conf
 .config/Thunar/
+.config/VirtualBox/
 .config/autostart/
 .config/aws/credentials
 .config/calibre/
 .config/cef_user_data/
 .config/chromium/
-.config/Code - OSS/
 .config/colima/
 .config/corectrl/
 .config/cpupower_gui/
@@ -27,7 +32,6 @@
 .config/htop/
 .config/ibus/
 .config/irb/
-.config/JetBrains/
 .config/jupyter/
 .config/k9s/
 .config/lazygit/
@@ -48,7 +52,6 @@
 .config/tool_state
 .config/unity3d/
 .config/variety/
-.config/VirtualBox/
 .config/vlc/
 .config/window-geometry.conf
 .config/xdg-terminals.list
@@ -94,7 +97,6 @@
 .xsession-errors.old
 .yarnrc
 .zoom/
-.Xauthority
 
 Books/
 Desktop/
@@ -108,7 +110,3 @@ Pictures/
 Public/
 dev/
 work/
-
-# in case I'm using these linux dotfiles on mac
-.CFUserTextEncoding
-.DS_Store
