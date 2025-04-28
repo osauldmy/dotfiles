@@ -27,6 +27,7 @@
 .config/evolution/
 .config/flameshot/
 .config/font-manager/
+.config/go/
 .config/grammarly-languageserver/
 .config/gtk-3.0/bookmarks
 .config/htop/
