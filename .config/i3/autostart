@@ -10,7 +10,7 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id nm-applet
 
 # restore wallpaper
-exec --no-startup-id ~/.fehbg
+# variety
 
 # Notifications manager
 exec --no-startup-id dunst
