@@ -10,7 +10,7 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id nm-applet
 
 # restore wallpaper
-exec --no-startup-id xwallpaper --focus /usr/share/backgrounds/archlinux/awesome.png
+exec --no-startup-id ~/.fehbg
 
 # Notifications manager
 exec --no-startup-id dunst

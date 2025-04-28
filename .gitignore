@@ -66,6 +66,7 @@
 .dmrc
 .docker
 .emulator_console_auth_token
+.fehbg
 .flutter
 .flutter-devtools/
 .gnupg/
