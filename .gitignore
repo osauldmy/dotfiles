@@ -6,6 +6,8 @@
 .azure/
 .cache/
 .cdk/
+.cljs/
+.clojure_history
 .config/Android Open Source Project/
 .config/Code - OSS/
 .config/Google/
@@ -18,7 +20,9 @@
 .config/calibre/
 .config/cef_user_data/
 .config/chromium/
+.config/clojure/
 .config/colima/
+.config/configstore/
 .config/corectrl/
 .config/cpupower_gui/
 .config/dconf/
@@ -85,6 +89,7 @@
 .password-store/
 .pki/
 .pub-cache/
+.python_history
 .ssh/
 .ssr/
 .steam/
