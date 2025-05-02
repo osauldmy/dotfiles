@@ -70,6 +70,7 @@
 .dartServer/
 .dmrc
 .docker
+.dsgui/
 .emulator_console_auth_token
 .fehbg
 .flutter
