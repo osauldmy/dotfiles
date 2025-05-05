@@ -49,8 +49,9 @@ bindkey "^[[1;5B" forward-word
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
-# My aliases (separate file)
+# My aliases & custom functions
 source "$XDG_CONFIG_HOME/aliases"
+source "$XDG_CONFIG_HOME/functions"
 
 # FIX for zsh on mac
 export DEFAULT_USER=$USER

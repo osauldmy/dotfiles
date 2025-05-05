@@ -1,0 +1,83 @@
+###############################################################
+#                       Custom Functions                      #
+###############################################################
+
+# Taken from OMZ & simplified
+take() {
+  mkdir -p "$@" && cd "${@:$#}"
+}
+
+# Taken from: https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/python/python.plugin.zsh
+pyclean() {
+  find "${@:-.}" -type f -name "*.py[co]" -delete
+  find "${@:-.}" -type d -name "__pycache__" -delete
+  find "${@:-.}" -depth -type d -name ".mypy_cache" -exec rm -r "{}" +
+  find "${@:-.}" -depth -type d -name ".pytest_cache" -exec rm -r "{}" +
+  find "${@:-.}" -depth -type d -name ".ruff_cache" -exec rm -r "{}" +
+}
+
+# Taken from: https://stackoverflow.com/a/1119738/6867502
+swap() {
+  local TMPFILE=tmp.$$
+  mv "$1" $TMPFILE
+  mv "$2" "$1"
+  mv $TMPFILE "$2"
+}
+
+load_env() {
+  set -o allexport
+  source .env
+  set +o allexport
+}
+
+# Rename all files with extension $1 to extension $2
+# example with typo: *.tx -> *.txt
+mv_all() {
+  for file in *."$1"; do
+    mv -- "$file" "${file%.${1}}.${2}"
+  done
+}
+
+# Create python virtual environment for a quick test
+tmpvenv() {
+  local tmp_dir
+  tmp_dir=$(mktemp -d)
+  python -m venv "$tmp_dir"
+  source "${tmp_dir}"/bin/activate
+}
+
+# Make file backup,
+# e.g. copy of foo.txt as .foo.txt.bkp
+# If some .foo.txt.bkp already exists -> another name will be used
+bkp() {
+  file_to_backup="$1"
+  backup="$1"
+
+  if [ "$#" -ne 1 ]; then
+    echo "bkp: Should be exactly one argument - the file to backup"
+    false
+  elif test -z "$file_to_backup"; then
+    echo "bkp: Specify the filename!"
+    false
+  elif test ! -e "$file_to_backup"; then
+    echo "bkp: This file or dir does not exist!"
+    false
+  fi
+
+  while test -e "$backup"; do
+    backup+=".bkp"
+  done
+
+  if test -f "$file_to_backup"; then
+    cp -v "$file_to_backup" "$backup"
+  elif test -d "$file_to_backup"; then
+    cp -v -r "$file_to_backup" "$backup"
+  fi
+}
+
+# Here my bash skills are not great, so I'm employing some python from bash
+replace() {
+  python -c "import sys; i = sys.stdin.read(); sys.stdout.write(i.replace('$1','$2'))"
+}
+
+# vim: ft=sh
