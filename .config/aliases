@@ -160,11 +160,4 @@ replace() {
   python -c "import sys; i = sys.stdin.read(); sys.stdout.write(i.replace('$1','$2'))"
 }
 
-# Something like pyclean, but for latex
-latex_clean() {
-  find . -type f -name "*.log" -exec rm {} \;
-  find . -type f -name "*.aux" -exec rm {} \;
-  find . -type f -name "*.dvi" -exec rm {} \;
-}
-
 # vim: ft=sh
