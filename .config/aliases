@@ -45,6 +45,7 @@ alias ls="ls -h --color=auto"
 alias ll="ls -l"
 alias la="ls -la"
 alias mv="mv -i"
+command -v xdg-open >/dev/null && alias open=xdg-open
 alias p=python3
 alias pip=pip3
 alias python=python3
