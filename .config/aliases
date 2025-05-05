@@ -40,19 +40,6 @@ alias gm="git merge"
 alias gmv="git mv"
 alias gr="git reset"
 alias grv="git revert"
-# alias grb="git rebase"
-# Fixes situation when after a week of developing a PR with normal commit timestamps
-# I rebase on newer master and lose all timestamps and PR looks like I've added N commits during one minute.
-grb() {
-  if [ "$#" -gt 0 ]; then
-    if [[ "$1" == *"--abort"* || "$1" == *"--continue"* ]]; then
-      git rebase "$@"
-      return
-    fi
-  fi
-  git rebase --committer-date-is-author-date "$@"
-}
-
 alias grbi='COMMIT=$(git log --oneline | fzf --layout=reverse | cut -d" " -f1); git rebase -i --committer-date-is-author-date "${COMMIT}^"'
 alias grm="git rm"
 alias grem="git remote"
