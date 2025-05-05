@@ -1,17 +1,7 @@
-alias ls="ls -h --color=auto"
-alias ll="ls -l"
-alias la="ls -la"
+alias dotfiles='GIT_DIR="$HOME"/.config/dotfiles GIT_WORK_TREE="$HOME"'
+alias d="dotfiles"
 
-alias mv="mv -i"
-
-if command -v trash-put >/dev/null; then
-    alias rm="trash-put"
-else
-    echo "~/.config/aliases: WARNING: trash-put is not present. Fallbacking to /usr/bin/rm" >&2
-fi
-
-alias grep="grep --color=auto"
-
+# Git
 alias ga="git add"
 alias gap="git add -p"
 alias gb="git branch"
@@ -33,32 +23,43 @@ alias glo="git log --all --graph --abbrev-commit --pretty=oneline --decorate=sho
 alias glp="git log --all --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)[%an]%Creset %Cgreen%cr %Creset'"
 # "git log summary or simplified", what branch is coming from what branch etc
 alias gls="git log --all --graph --abbrev-commit --pretty=oneline --simplify-by-decoration"
+alias gm="git merge"
+alias gmv="git mv"
 alias gp="git push"
 alias gpoh="git push origin HEAD"
 alias gpl="git pull"
-alias gm="git merge"
-alias gmv="git mv"
 alias gr="git reset"
-alias grv="git revert"
 alias grbi='COMMIT=$(git log --oneline | fzf --layout=reverse | cut -d" " -f1); git rebase -i --committer-date-is-author-date "${COMMIT}^"'
 alias grm="git rm"
 alias grem="git remote"
-alias gsh="git show"
+alias grv="git revert"
 alias gs="git status"
+alias gsh="git show"
 alias gst="git stash"
 
-alias dotfiles='GIT_DIR="$HOME"/.config/dotfiles GIT_WORK_TREE="$HOME"'
-alias d="dotfiles"
+alias grep="grep --color=auto"
 
 alias k=kubectl
 alias l=lazygit
+alias ls="ls -h --color=auto"
+alias ll="ls -l"
+alias la="ls -la"
+alias mv="mv -i"
 alias p=python3
 alias pip=pip3
 alias python=python3
+
+if command -v trash-put >/dev/null; then
+    alias rm="trash-put"
+else
+    echo "~/.config/aliases: WARNING: trash-put is not present. Fallbacking to /usr/bin/rm" >&2
+fi
+
 alias t=tmux
-alias vi=vim
+
 alias vim=nvim
-alias v=vim
+alias vi=nvim
+alias v=nvim
 alias vimdiff="nvim -d"
 
 # shellcheck source=/dev/null
