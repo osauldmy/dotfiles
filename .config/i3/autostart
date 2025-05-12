@@ -4,7 +4,8 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id picom --daemon
 
 # blue-light filter
-exec --no-startup-id redshift-gtk
+# Run manually or delegate to dex/other autostarter
+# exec --no-startup-id redshift-gtk
 
 # network manager applet
 exec --no-startup-id nm-applet
