@@ -44,5 +44,5 @@ history = 15000
 multiplier = 5
 
 [window]
-opacity = 0.95
+opacity = 0.9
 decorations_theme_variant = "dark"
