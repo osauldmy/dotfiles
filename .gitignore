@@ -91,6 +91,8 @@
 .pki/
 .pub-cache/
 .python_history
+.sbcl_history
+.slime/
 .ssh/
 .ssr/
 .steam/

@@ -56,6 +56,7 @@ else
     echo "~/.config/aliases: WARNING: trash-put is not present. Fallbacking to /usr/bin/rm" >&2
 fi
 
+alias sbcl="rlwrap sbcl"
 alias t=tmux
 
 alias vim=nvim
