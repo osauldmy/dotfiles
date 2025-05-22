@@ -93,6 +93,7 @@
 .python_history
 .sbcl_history
 .slime/
+.slime-history.eld
 .ssh/
 .ssr/
 .steam/
