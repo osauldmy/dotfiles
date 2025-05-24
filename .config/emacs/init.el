@@ -1,8 +1,10 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
+(package-install 'slime)
+
 (setq inferior-lisp-program "sbcl")
-(load (expand-file-name "~/.local/share/quicklisp/slime-helper.el"))
+(require 'slime)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
