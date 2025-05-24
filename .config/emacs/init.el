@@ -1,9 +1,9 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
-(package-install 'slime)
-(package-install 'gruvbox-theme)
-(package-install 'evil)
+(dolist (package '(slime evil gruvbox-theme))
+  (unless (package-installed-p package)
+    (package-install package)))
 
 (setq custom-safe-themes t)
 (load-theme 'gruvbox-dark-medium)
