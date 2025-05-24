@@ -2,9 +2,13 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
 (package-install 'slime)
+(package-install 'evil)
 
 (setq inferior-lisp-program "sbcl")
 (require 'slime)
+
+(require 'evil)
+(evil-mode 1)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
