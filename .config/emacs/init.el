@@ -5,7 +5,8 @@
 (package-install 'gruvbox-theme)
 (package-install 'evil)
 
-(load-theme 'gruvbox-dark-medium :no-confirm)
+(setq custom-safe-themes t)
+(load-theme 'gruvbox-dark-medium)
 
 (setq inferior-lisp-program "sbcl")
 (require 'slime)
