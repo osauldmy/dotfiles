@@ -2,7 +2,10 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
 (package-install 'slime)
+(package-install 'gruvbox-theme)
 (package-install 'evil)
+
+(load-theme 'gruvbox-dark-medium :no-confirm)
 
 (setq inferior-lisp-program "sbcl")
 (require 'slime)
