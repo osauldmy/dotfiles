@@ -1,7 +1,7 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
-(dolist (package '(slime evil gruvbox-theme))
+(dolist (package '(slime company evil gruvbox-theme))
   (unless (package-installed-p package)
     (package-install package)))
 
@@ -15,6 +15,8 @@
 (evil-mode 1)
 
 (global-display-line-numbers-mode)
+
+(add-hook 'after-init-hook 'global-company-mode)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
