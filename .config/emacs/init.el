@@ -1,7 +1,7 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
-(dolist (package '(slime company evil gruvbox-theme))
+(dolist (package '(slime paredit company evil gruvbox-theme))
   (unless (package-installed-p package)
     (package-install package)))
 
