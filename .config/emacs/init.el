@@ -1,7 +1,7 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
-(dolist (package '(slime paredit company evil gruvbox-theme))
+(dolist (package '(sly paredit company evil gruvbox-theme))
   (unless (package-installed-p package)
     (package-install package)))
 
@@ -9,7 +9,6 @@
 (load-theme 'gruvbox-dark-medium)
 
 (setq inferior-lisp-program "sbcl")
-(require 'slime)
 
 (require 'evil)
 (evil-mode 1)
@@ -17,6 +16,12 @@
 (global-display-line-numbers-mode)
 
 (add-hook 'after-init-hook 'global-company-mode)
+
+(add-hook 'sly-mode-hook
+          (lambda ()
+            (unless (sly-connected-p)
+              (save-excursion (sly)))))
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
