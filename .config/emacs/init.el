@@ -10,8 +10,8 @@
 
 (setq inferior-lisp-program "sbcl")
 
-(require 'evil)
-(evil-mode 1)
+;; (require 'evil)
+;; (evil-mode 1)
 
 (global-display-line-numbers-mode)
 
