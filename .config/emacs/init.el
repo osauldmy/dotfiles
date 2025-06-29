@@ -17,6 +17,10 @@
 
 (add-hook 'after-init-hook 'global-company-mode)
 
+(add-hook 'emacs-lisp-mode-hook       'enable-paredit-mode)
+(add-hook 'lisp-mode-hook             'enable-paredit-mode)
+(add-hook 'lisp-interaction-mode-hook 'enable-paredit-mode)
+
 (add-hook 'sly-mode-hook
           (lambda ()
             (unless (sly-connected-p)
