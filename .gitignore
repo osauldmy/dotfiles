@@ -94,6 +94,7 @@
 .sbcl_history
 .slime/
 .slime-history.eld
+.sly-mrepl-history
 .ssh/
 .ssr/
 .steam/
