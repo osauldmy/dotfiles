@@ -20,7 +20,9 @@
 .config/calibre/
 .config/cef_user_data/
 .config/chromium/
-.config/clojure/
+.config/clojure/.clj-kondo/
+.config/clojure/.clj-lsp/
+.config/clojure/.cpcache/
 .config/colima/
 .config/configstore/
 .config/corectrl/
