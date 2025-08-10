@@ -96,6 +96,7 @@ export PSQL_HISTORY="$XDG_CACHE_HOME/psql_history"
 
 # Python
 export PYTHON_HISTORY="$XDG_CACHE_HOME/python_history"
+export PYTHONSTARTUP="$XDG_CONFIG_HOME/python_startup.py"
 
 # pre-commit colors fix
 export PRE_COMMIT_COLOR=always
