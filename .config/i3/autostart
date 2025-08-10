@@ -23,5 +23,11 @@ exec --no-startup-id setxkbmap -option grp:switch,grp:alt_shift_toggle us,cz,ua
 
 exec --no-startup-id xrandr -s 2560x1440 -r 240
 
+# Idle/suspend hook for PC. Would use xss-lock for laptop
+exec --no-startup-id xidlehook \
+--detect-sleep \
+--not-when-audio \
+--not-when-fullscreen \
+--timer 600 'systemctl suspend' ''
 
 # vim: ft=i3config
