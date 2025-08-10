@@ -40,8 +40,8 @@ mods = "Control|Shift"
 hide_when_typing = false
 
 [scrolling]
-history = 15000
-multiplier = 5
+history = 100000
+multiplier = 10
 
 [window]
 opacity = 0.9
