@@ -4,6 +4,7 @@
 .android/
 .aws/
 .azure/
+.cabal/
 .cache/
 .cdk/
 .cljs/
@@ -30,9 +31,14 @@
 .config/dconf/
 .config/docker/
 .config/dotfiles/
+.config/emacs/eln-cache/
+.config/emacs/elpa/
+.config/emacs/init.el~
 .config/evolution/
 .config/flameshot/
 .config/font-manager/
+.config/ghc/
+.config/ghcup/
 .config/go/
 .config/grammarly-languageserver/
 .config/gtk-3.0/bookmarks
@@ -41,6 +47,7 @@
 .config/irb/
 .config/jupyter/
 .config/k9s/
+.config/lact/
 .config/lazygit/
 .config/libreoffice/
 .config/mimeapps.list
@@ -63,6 +70,7 @@
 .config/window-geometry.conf
 .config/xdg-terminals.list
 .config/xfce4/
+.config/whoozle.github.io/
 .config/zoom.conf
 .config/zoomus.conf
 .config/zsh/.zcompcache/*
@@ -77,6 +85,7 @@
 .fehbg
 .flutter
 .flutter-devtools/
+.gitlibs/
 .gnupg/
 .hex/
 .icons/
@@ -89,16 +98,19 @@
 .mozilla/
 .netrc
 .ollama/
+.opam/
 .password-store/
 .pki/
 .pub-cache/
 .python_history
+.roswell/
 .sbcl_history
 .slime/
 .slime-history.eld
 .sly-mrepl-history
 .ssh/
 .ssr/
+.stack/
 .steam/
 .steampath
 .steampid
