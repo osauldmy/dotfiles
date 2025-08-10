@@ -39,6 +39,9 @@ export CHROME_EXECUTABLE=/usr/bin/chromium
 # Google Test / GTest
 export GTEST_COLOR=1
 
+# Haskell/ghcup
+[ -f "$XDG_DATA_HOME/ghcup/env" ] && . "$XDG_DATA_HOME/ghcup/env"
+
 # Homebrew (only for mac)
 if [ "$(uname)" = "Darwin" ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
