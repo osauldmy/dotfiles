@@ -79,6 +79,9 @@ for dump in ~/.config/zsh/.zcompdump(N.mh+24); do
 done
 compinit -C
 
+# Disable terminal freezing with Ctrl-S (unfreezing Ctrl-Q)
+stty -ixon
+
 # command -v pyenv >/dev/null 2>/dev/null && eval "$(pyenv init -)"
 
 ################################################################################
