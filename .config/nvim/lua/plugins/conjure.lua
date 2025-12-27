@@ -1,5 +1,7 @@
 return {
   "Olical/conjure",
   ft = { "clojure", "lisp" },
-  lazy = true,
+  config = function()
+    vim.g["conjure#client#clojure#nrepl#connection#auto_repl#enabled"] = false
+  end,
 }
