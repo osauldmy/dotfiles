@@ -22,7 +22,10 @@ return {
         sync_install = false,
         disable = {},
         additional_vim_regex_highlighting = false,
-        highlight = { enable = true },
+        highlight = {
+          enable = true,
+          disable = { "csv" },
+        },
       })
     end,
   },
