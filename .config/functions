@@ -55,7 +55,7 @@ mv_all() {
 tmpvenv() {
   local tmp_dir
   tmp_dir=$(mktemp -d)
-  python -m venv "$tmp_dir"
+  uv venv "$tmp_dir"
   source "${tmp_dir}"/bin/activate
 }
 
