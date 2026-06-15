@@ -24,7 +24,7 @@ return {
         additional_vim_regex_highlighting = false,
         highlight = {
           enable = true,
-          disable = { "csv" },
+          disable = { "csv", "htmldjango" },
         },
       })
     end,
